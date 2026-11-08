@@ -4,42 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="FtFy1SkzgABD0xK42TorGuzidr4-XOKsnBTxP6JafkU" />
-  <title>co-pon - Digital Coupon Wallet</title>
+  <title>co-pon - Digital Coupon Manager</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    header {
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    }
+
+    .feature-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      background: var(--bg-card);
+    }
+
+    footer nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 5rem;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    footer nav a:hover {
+      color: var(--primary);
+    }
+
+    footer nav span {
+      color: var(--border-color);
+      margin: 0 0.75rem;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>The fast, simple, zero-bloat digital coupon wallet.</h1>
-    <p>Organize your coupons without battery drain, ads, or clunky menus.</p>
+    <div class="container">
+      <h1>The fast, simple, zero-bloat digital coupon wallet.</h1>
+      <p>Organize your coupons without battery drain, clutter, or distractions.</p>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
-      <h2>Why use co-pon?</h2>
-      <ul>
-        <li>
-          <h3>⚡ Ultra-Fast &amp; Lightweight</h3>
-          <p>Starts instantly and keeps your device running smooth.</p>
-        </li>
-        <li>
-          <h3>🎨 Clean Modern Design</h3>
-          <p>A simple, high-contrast look that works perfectly in Light and Dark mode.</p>
-        </li>
-        <li>
-          <h3>👥 Easy Partner Sharing</h3>
-          <p>Share wallet access with family or partners instantly using their Gmail (with premium subscription).</p>
-        </li>
-        <li>
-          <h3>🔒 Secure &amp; Private</h3>
-          <p>Protected by Google Sign-In. Your data stays yours—no tracking, no bloat.</p>
-        </li>
-      </ul>
-    </section>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="icon">📁</div>
+          <h3>Custom Wallet Organization</h3>
+          <p>Group your gift cards, vouchers, and rewards into custom wallets for effortless access right when you need them.</p>
+        </div>
 
-    <section>
-      <a href="privacy.html">Privacy Policy</a>&nbsp;|&nbsp;<a href="terms.html">Terms Of Service</a>
+        <div class="feature-card">
+          <div class="icon">📷</div>
+          <h3>Media &amp; Barcode Management</h3>
+          <p>Instantly attach images, store barcodes, or upload digital passes for frictionless, hassle-free checkout scanning.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🛡️</div>
+          <h3>100% Ad-Free Experience</h3>
+          <p>Enjoy a clean, focused UI with zero advertising, zero tracking popups, and complete focus on your data.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">👥</div>
+          <h3>Easy Partner Sharing</h3>
+          <p>Share live wallet access with family members or partners seamlessly using their Gmail address.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Ultra-Fast &amp; Lightweight</h3>
+          <p>Launches in a flash with minimal battery consumption and no bloated menus or hidden subprocesses.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🔒</div>
+          <h3>Secure &amp; Private</h3>
+          <p>Protected by Google Sign-In with private cloud storage so your sensitive cards remain exclusively yours.</p>
+        </div>
+
+      </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
 </html>
