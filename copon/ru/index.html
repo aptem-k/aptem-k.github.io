@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="FtFy1SkzgABD0xK42TorGuzidr4-XOKsnBTxP6JafkU" />
+  <title>co-pon | Цифровой менеджер купонов</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    header {
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    }
+
+    .feature-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      background: var(--bg-card);
+    }
+
+    footer nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    footer nav a:hover {
+      color: var(--primary);
+    }
+
+    footer nav span {
+      color: var(--border-color);
+      margin: 0 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Быстрый, простой и легкий цифровой менеджер купонов</h1>
+      <p>Организуйте свои купоны без лишнего разряда батареи, хаоса и отвлекающих факторов</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="icon">💳</div>
+          <h3>Организация кошелька</h3>
+          <p>Группируйте подарочные карты, ваучеры и бонусы в кошельки для быстрого доступа именно тогда, когда они вам нужны.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🎟️</div>
+          <h3>Изображения и штрихкоды</h3>
+          <p>Мгновенно прикрепляйте фото, сохраняйте штрихкоды или загружайте цифровые пропуска для быстрого и простого сканирования на кассе.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🤝</div>
+          <h3>Удобный совместный доступ</h3>
+          <p>Делитесь общим доступом к кошельку с членами семьи или близкими, используя их адрес Gmail.<br>* доступно по премиум-подписке</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="icon">🚫</div>
+          <h3>100% без рекламы</h3>
+          <p>Наслаждайтесь чистым интерфейсом без рекламы, всплывающих окон отслеживания и с полным фокусом на ваших данных.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Сверхбыстрый и легкий</h3>
+          <p>Запускается моментально, расходует минимум заряда батареи и не содержит громоздких меню или скрытых процессов.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🔒</div>
+          <h3>Безопасно и конфиденциально</h3>
+          <p>Защищено входом через Google с приватным облачным хранилищем, поэтому ваши конфиденциальные карты остаются только вашими.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <a href="../privacy.html">Политика конфиденциальности</a>
+        <span>|</span>
+        <a href="../terms.html">Условия обслуживания</a>
+        <span>|</span>
+        <a href="https://drive.google.com/file/d/1eJ1F8o2MsTFLHyZDaXJQfuESw6PdY8J6/view?usp=drive_link">Скачать</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
