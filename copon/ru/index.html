@@ -64,7 +64,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     .feature-card {
@@ -97,6 +97,53 @@
     .feature-card p {
       color: var(--text-muted);
       font-size: 0.975rem;
+    }
+
+    /* Full screen joke testimonial card styles */
+    .testimonial-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border: 2px dashed var(--primary);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      margin-bottom: 4rem;
+    }
+
+    .testimonial-banner .badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-content {
+      transition: opacity 0.5s ease-in-out;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .testimonial-banner blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      max-width: 800px;
+    }
+
+    .testimonial-banner .author {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-hover);
     }
 
     footer {
@@ -175,6 +222,16 @@
         </div>
 
       </div>
+
+      <!-- Joke Testimonials Full-Width Card -->
+      <div class="testimonial-banner">
+        <span class="badge">🌟 Свидетельства очевидцев (полностью правдиво)</span>
+        <div class="testimonial-content" id="testimonial-box">
+          <blockquote id="quote-text">«Это приложение спасло мой брак, вернуло веру в человечество и увеличило скорость работы моего телефона в 800 раз!»</blockquote>
+          <div class="author" id="quote-author">— Анатолий, человек, который наконец-то счастлив</div>
+        </div>
+      </div>
+
     </section>
   </main>
 
@@ -191,6 +248,61 @@
       </nav>
     </div>
   </footer>
+
+  <script>
+    const testimonials = [
+      {
+        text: "«Это приложение спасло мой брак, вернуло веру в человечество и увеличило скорость работы моего телефона в 800 раз!»",
+        author: "— Анатолий, человек, который наконец-то счастлив"
+      },
+      {
+        text: "«Раньше я плакал на кассе в супермаркете, роясь в карманах. Теперь кассиры плачут от зависти к моей невероятной продуктивности!»",
+        author: "— Светлана, амбассадор порядка в чеках"
+      },
+      {
+        text: "«Мой кот перестал мяукать по ночам, потому что установил co-pon. Мы оба теперь спим как младенцы, обнимая цифровые скидки!»",
+        author: "— Евгений, котовладелец-миллионер (по ощущениям)"
+      },
+      {
+        text: "«Марк Цукерберг лично звонил мне в слезах и спрашивал, как нам удалось сделать интерфейс настолько безупречным. Я сбросил трубку.»",
+        author: "— Игнат, криптоэнтузиаст и философ"
+      },
+      {
+        text: "«После установки этого менеджера купонов из моего крана потекла чистейшая минеральная вода, а соседи начали аплодировать мне с балкона!»",
+        author: "— Елена, балерина и любительница купонов на скидку 5%"
+      }
+    ];
+
+    let currentIndex = -1;
+
+    function rotateTestimonial() {
+      const box = document.getElementById('testimonial-box');
+      const quoteEl = document.getElementById('quote-text');
+      const authorEl = document.getElementById('quote-author');
+
+      // Fade out
+      box.style.opacity = 0;
+
+      setTimeout(() => {
+        // Pick a random index, ensuring it doesn't repeat the exact same one immediately
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * testimonials.length);
+        } while (newIndex === currentIndex && testimonials.length > 1);
+        
+        currentIndex = newIndex;
+
+        quoteEl.textContent = testimonials[currentIndex].text;
+        authorEl.textContent = testimonials[currentIndex].author;
+
+        // Fade in
+        box.style.opacity = 1;
+      }, 500);
+    }
+
+    // Rotate every 15 seconds
+    setInterval(rotateTestimonial, 15000);
+  </script>
 
 </body>
 </html>
