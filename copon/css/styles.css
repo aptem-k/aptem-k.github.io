@@ -225,3 +225,7 @@ footer nav span {
 .support-line a:hover {
   text-decoration: underline;
 }
+
+html[lang="ru"] {
+  font-size: 14px; /* Default is usually 16px */
+}
