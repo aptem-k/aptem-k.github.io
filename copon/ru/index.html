@@ -5,172 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="FtFy1SkzgABD0xK42TorGuzidr4-XOKsnBTxP6JafkU" />
   <title>co-pon | Цифровой менеджер купонов</title>
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --bg-body: #f8fafc;
-      --bg-card: #ffffff;
-      --border-color: #e2e8f0;
-      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-body);
-      color: var(--text-main);
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      width: 100%;
-    }
-
-    header {
-      padding: 4rem 0 3rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.1rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      color: var(--text-main);
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .feature-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1.75rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
-    }
-
-    .feature-card .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-
-    .feature-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text-main);
-    }
-
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.975rem;
-    }
-
-    /* Full screen joke testimonial card styles */
-    .testimonial-banner {
-      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-      border: 2px dashed var(--primary);
-      border-radius: 16px;
-      padding: 2.5rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-      margin-bottom: 4rem;
-    }
-
-    .testimonial-banner .badge {
-      display: inline-block;
-      background: var(--primary);
-      color: #ffffff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.75rem;
-      border-radius: 50px;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-content {
-      transition: opacity 0.5s ease-in-out;
-      min-height: 90px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .testimonial-banner blockquote {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--text-main);
-      margin-bottom: 0.75rem;
-      max-width: 800px;
-    }
-
-    .testimonial-banner .author {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--primary-hover);
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 2rem 0;
-      border-top: 1px solid var(--border-color);
-      text-align: center;
-      background: var(--bg-card);
-    }
-
-    footer nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: color 0.15s ease;
-    }
-
-    footer nav a:hover {
-      color: var(--primary);
-    }
-
-    footer nav span {
-      color: var(--border-color);
-      margin: 0 0.75rem;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
@@ -178,45 +13,61 @@
     <div class="container">
       <h1>Быстрый и простой цифровой менеджер купонов</h1>
       <p>Организуйте свои купоны без лишнего разряда батареи, хаоса и отвлекающих факторов</p>
+      <div class="cta-group">
+        <a 
+          href="https://drive.google.com/file/d/1eJ1F8o2MsTFLHyZDaXJQfuESw6PdY8J6/view?usp=drive_link" 
+          class="btn-download"
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Скачать приложение co-pon с Google Диска (откроется в новой вкладке)"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Скачать приложение
+        </a>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <section>
+    <section aria-label="Возможности">
       <div class="features-grid">
         
         <div class="feature-card">
-          <div class="icon">📁</div>
+          <div class="icon" aria-hidden="true">📁</div>
           <h3>Организация кошелька</h3>
           <p>Группируйте подарочные карты, ваучеры и бонусы в кошельки для быстрого доступа именно тогда, когда они вам нужны.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon">📷</div>
+          <div class="icon" aria-hidden="true">📷</div>
           <h3>Изображения и штрихкоды</h3>
           <p>Мгновенно прикрепляйте фото, сохраняйте штрихкоды или загружайте цифровые пропуска для быстрого и простого сканирования на кассе.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon">👥</div>
+          <div class="icon" aria-hidden="true">👥</div>
           <h3>Удобный совместный доступ</h3>
           <p>Делитесь общим доступом к кошельку с членами семьи или близкими, используя их адрес Gmail.<br>* доступно по премиум-подписке</p>
         </div>
         
         <div class="feature-card">
-          <div class="icon">🛡️</div>
+          <div class="icon" aria-hidden="true">🛡️</div>
           <h3>100% без рекламы</h3>
           <p>Наслаждайтесь чистым интерфейсом без рекламы, всплывающих окон отслеживания и с полным фокусом на ваших данных.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon">⚡</div>
+          <div class="icon" aria-hidden="true">⚡</div>
           <h3>Сверхбыстрый и легкий</h3>
           <p>Запускается моментально, расходует минимум заряда батареи и не содержит громоздких меню или скрытых процессов.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon">🔒</div>
+          <div class="icon" aria-hidden="true">🔒</div>
           <h3>Безопасно и конфиденциально</h3>
           <p>Защищено входом через Google с приватным облачным хранилищем, поэтому ваши конфиденциальные карты остаются только вашими.</p>
         </div>
@@ -225,7 +76,6 @@
 
       <!-- Joke Testimonials Full-Width Card -->
       <div class="testimonial-banner">
-        <!-- span class="badge">🌟 Свидетельства очевидцев (полностью правдиво)</span -->
         <div class="testimonial-content" id="testimonial-box">
           <blockquote id="quote-text">«Это приложение спасло мой брак, вернуло веру в человечество и увеличило скорость работы моего телефона в 800 раз!»</blockquote>
           <div class="author" id="quote-author">— Анатолий, человек, который наконец-то счастлив</div>
@@ -237,15 +87,20 @@
 
   <footer>
     <div class="container">
-      <nav>
-        <a href="https://drive.google.com/file/d/1eJ1F8o2MsTFLHyZDaXJQfuESw6PdY8J6/view?usp=drive_link">Скачать</a>
-        <span>|</span>
+      <nav aria-label="Навигация в подвале">
+        <a href="https://drive.google.com/file/d/1eJ1F8o2MsTFLHyZDaXJQfuESw6PdY8J6/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Скачать</a>
+        <span aria-hidden="true">|</span>
         <a href="../privacy.html">Политика конфиденциальности</a>
-        <span>|</span>
+        <span aria-hidden="true">|</span>
         <a href="../terms.html">Условия обслуживания</a>
-        <span>|</span>
-        <a href="../">Английская Версия</a>        
+        <span aria-hidden="true">|</span>
+        <a href="mailto:copon.support@gmail.com">Поддержка</a>
+        <span aria-hidden="true">|</span>
+        <a href="../">English</a>
       </nav>
+      <p class="support-line">
+        Нужна помощь? Свяжитесь с нами: <a href="mailto:copon.support@gmail.com">copon.support@gmail.com</a>
+      </p>
     </div>
   </footer>
 
@@ -280,11 +135,9 @@
       const quoteEl = document.getElementById('quote-text');
       const authorEl = document.getElementById('quote-author');
 
-      // Fade out
       box.style.opacity = 0;
 
       setTimeout(() => {
-        // Pick a random index, ensuring it doesn't repeat the exact same one immediately
         let newIndex;
         do {
           newIndex = Math.floor(Math.random() * testimonials.length);
@@ -295,12 +148,10 @@
         quoteEl.textContent = testimonials[currentIndex].text;
         authorEl.textContent = testimonials[currentIndex].author;
 
-        // Fade in
         box.style.opacity = 1;
       }, 500);
     }
 
-    // Rotate every 15 seconds
     setInterval(rotateTestimonial, 15000);
   </script>
 
