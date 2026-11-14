@@ -6,7 +6,7 @@
   <meta name="google-site-verification" content="FtFy1SkzgABD0xK42TorGuzidr4-XOKsnBTxP6JafkU" />
   <title>co-pon | Digital Coupon Manager</title>
   <style>
-    :root {
+:root {
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
       --text-main: #0f172a;
@@ -57,7 +57,43 @@
       font-size: 1.2rem;
       color: var(--text-muted);
       max-width: 750px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+    }
+
+    /* Prominent, Accessible Download CTA */
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-download:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-download:focus-visible,
+    footer a:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
     .features-grid {
@@ -107,21 +143,45 @@
       background: var(--bg-card);
     }
 
+    footer nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
     footer nav a {
       color: var(--text-muted);
       text-decoration: none;
-      font-weight: 5rem;
-      font-size: 0.9rem;
+      font-weight: 500;
+      font-size: 0.95rem;
       transition: color 0.15s ease;
     }
 
     footer nav a:hover {
       color: var(--primary);
+      text-decoration: underline;
     }
 
     footer nav span {
       color: var(--border-color);
-      margin: 0 0.75rem;
+    }
+
+    .support-line {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .support-line a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .support-line a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -178,6 +238,22 @@
     </section>
   </main>
 
+<footer>
+    <div class="container">
+      <nav aria-label="Footer Navigation">
+        <a href="https://drive.google.com/file/d/1eJ1F8o2MsTFLHyZDaXJQfuESw6PdY8J6/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download</a>
+        <span aria-hidden="true">|</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span aria-hidden="true">|</span>
+        <a href="terms.html">Terms of Service</a>
+        <span aria-hidden="true">|</span>
+        <a href="mailto:copon.support@gmail.com">Support</a>
+      </nav>
+      <p class="support-line">
+        Need help? Contact us at <a href="mailto:copon.support@gmail.com">copon.support@gmail.com</a>
+      </p>
+    </div>
+  </footer>  
   <footer>
     <div class="container">
       <nav>
